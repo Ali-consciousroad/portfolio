@@ -1,3 +1,8 @@
+
+# Portfolio Project
+
+Portfolio project built using popular libraries like React, Chakra UI, Formik and Yup
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
