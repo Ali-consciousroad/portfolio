@@ -65,6 +65,23 @@ const Header = () => {
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
+            <HStack spacing="40px">
+              <a href="https://github.com/Ali-consciousroad">
+                <FontAwesomeIcon icon={faGithub} size="2px"/>
+              </a>
+              <a href="https://www.linkedin.com/in/ali-dindar-a5917073/">
+                <FontAwesomeIcon icon={faLinkedin} size="2px"/>
+              </a>
+              {/* <a href="https://medium.com">
+                <FontAwesomeIcon icon={faMedium} size="2px" />
+              </a> */}
+              {/* <a href="https://stackoverflow.com">
+                <FontAwesomeIcon icon={faStackOverflow} size="2px" />
+              </a> */}
+              <a href="mailto:ali_dindar@live.be">
+                <FontAwesomeIcon icon={faEnvelope} size="2px" />
+              </a>
+            </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
