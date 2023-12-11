@@ -65,6 +65,7 @@ const Header = () => {
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
+            {/* Left Section: Social Media Links */}
             <HStack spacing="40px">
               <a href="https://github.com/Ali-consciousroad">
                 <FontAwesomeIcon icon={faGithub} size="2px"/>
@@ -84,8 +85,11 @@ const Header = () => {
             </HStack>
           </nav>
           <nav>
+            {/* Right section: Projects and Contact me links */}
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
+              <a href="/#projects-section">Projects</a>
+              <a href="/#contact-me">Contact</a>
             </HStack>
           </nav>
         </HStack>
