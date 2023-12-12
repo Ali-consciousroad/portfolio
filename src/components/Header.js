@@ -89,7 +89,7 @@ const Header = () => {
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
               <a href="/#projects-section">Projects</a>
-              <a href="/#contact-me">Contact</a>
+              <a href="/#contactme-section">Contact</a>
             </HStack>
           </nav>
         </HStack>
