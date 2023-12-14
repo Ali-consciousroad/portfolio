@@ -43,7 +43,7 @@ const ProjectsSection = () => {
         Featured Projects
       </Heading>
       <Box
-        display="grid"
+        display="grid" // 2D layout 
         gridTemplateColumns="repeat(2,minmax(0,1fr))"
         gridGap={8}
       >
