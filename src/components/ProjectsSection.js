@@ -47,6 +47,7 @@ const ProjectsSection = () => {
         gridTemplateColumns="repeat(2,minmax(0,1fr))"
         gridGap={8}
       >
+        {/* Map over the projects array and render a Card component for each project */}
         {projects.map((project) => (
           <Card
             key={project.title}
