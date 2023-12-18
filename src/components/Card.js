@@ -10,13 +10,16 @@ const Card = ({ title, description, imageSrc }) => {
   return (
       <VStack
         border={5}
-        backgroundColor={"white"}
-        textColor={"black"}
+        backgroundColor="white"
+        textColor="black"
+        borderRadius={10}
+        boxShadow="lg"
+        align="start"
       >
-        <Image src={imageSrc} />
-        <Heading>{title}</Heading>
-        <Text>{description}</Text>
-        <HStack>
+        <Image src={imageSrc} borderTopRadius={10} />
+        <Heading px={5}>{title}</Heading>
+        <Text px={5}>{description}</Text>
+        <HStack px={5} pb={3}>
           <Text>See more</Text>
           <FontAwesomeIcon icon={faArrowRight} />
         </HStack>
