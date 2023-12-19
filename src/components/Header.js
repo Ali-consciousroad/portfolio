@@ -71,16 +71,16 @@ const Header = () => {
                 <FontAwesomeIcon icon={faGithub} size="xs"/>
               </a>
               <a href="https://www.linkedin.com/in/ali-dindar-a5917073/">
-                <FontAwesomeIcon icon={faLinkedin} size="xs"/>
+                <FontAwesomeIcon icon={faLinkedin} size="1x"/>
               </a>
               {/* <a href="https://medium.com">
-                <FontAwesomeIcon icon={faMedium} size="xs" />
+                <FontAwesomeIcon icon={faMedium} size="1x" />
               </a> */}
               {/* <a href="https://stackoverflow.com">
-                <FontAwesomeIcon icon={faStackOverflow} size="xs" />
+                <FontAwesomeIcon icon={faStackOverflow} size="1x" />
               </a> */}
               <a href="mailto:ali_dindar@live.be">
-                <FontAwesomeIcon icon={faEnvelope} size="xs" />
+                <FontAwesomeIcon icon={faEnvelope} size="1x" />
               </a>
             </HStack>
           </nav>

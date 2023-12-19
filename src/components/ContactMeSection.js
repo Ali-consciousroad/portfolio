@@ -21,8 +21,10 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
+  // Pass the useFormik() hook initial form values and a submit function that will
+  // be called when the form is submitted
   const formik = useFormik({
-    initialValues: {},
+    initialValues: {firstName: '', email: '', type: '', comment: ''},
     onSubmit: (values) => {},
     validationSchema: Yup.object({}),
   });
