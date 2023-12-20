@@ -18,6 +18,7 @@ import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
+  // Desctructure the custom hook to get the isLoading, response and submit function
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
@@ -26,7 +27,22 @@ const LandingSection = () => {
   const formik = useFormik({
     initialValues: {firstName: '', email: '', type: '', comment: ''},
     onSubmit: (values) => {},
-    validationSchema: Yup.object({}),
+    // Add the validation rules
+    validationSchema: Yup.object().shape({
+      firstName: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('Required'),
+      email: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      type: Yup.string()
+        .required('Required'),
+      comment: Yup.string()
+        .min(5, 'Too Short!')
+        .max(500, 'Too Long!')
+        .required('Required'),
+    }),
   });
 
   return (
