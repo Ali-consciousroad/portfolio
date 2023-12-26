@@ -45,6 +45,7 @@ const LandingSection = () => {
     }),
   });
 
+  // UI logic
   return (
     <FullScreenSection
       isDarkBackground

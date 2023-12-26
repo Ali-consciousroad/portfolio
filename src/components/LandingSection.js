@@ -20,7 +20,7 @@ const LandingSection = () => (
     <Avatar size="2xl" name="Ali" src={profilePic} />
     <Heading as="h1" size="m" color="white" textAlign="center">Hello, Ali there!</Heading>
     <Heading as="h1" size="xl" color="white" textAlign="center">Web3 Full Stack JS Engineer</Heading>
-    <Heading as="h1" size="xl" color="white" textAlign="center">specialised in React, Next.js and Node.js</Heading>
+    <Heading as="h1" size="xl" color="white" textAlign="center">specialised in React, Next.js, Node.js and Solidity</Heading>
 
   </VStack>
 
