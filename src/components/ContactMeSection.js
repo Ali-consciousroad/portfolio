@@ -26,7 +26,7 @@ const LandingSection = () => {
   // be called when the form is submitted
   const formik = useFormik({
     initialValues: {firstName: '', email: '', type: '', comment: ''},
-    onSubmit: (values) => {},
+    onSubmit: (values) => {}, 
     // Add the validation rules
     validationSchema: Yup.object().shape({
       firstName: Yup.string()
@@ -58,13 +58,15 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={formik.handleSubmit}> // Add the onSubmit handler
             <VStack spacing={4}>
               <FormControl isInvalid={false}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
+                  // Add the necessary props to the input element
+                  {...formik.getFieldProps('firstName')}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
@@ -74,6 +76,7 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
+                  {...formik.getFieldProps('email')}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
@@ -93,6 +96,8 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
+                  // Add the necessary props to the textarea element
+                  {...formik.getFieldProps('comment')}
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
