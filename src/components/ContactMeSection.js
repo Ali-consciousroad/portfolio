@@ -45,6 +45,9 @@ const LandingSection = () => {
     }),
   });
 
+  // Destructure the formik object to get the errors object and avoid code repetition (formik.errors.firstName written errors.firstName instead)
+  const { errors, touched } = formik;
+
   // UI logic
   return (
     <FullScreenSection
@@ -59,11 +62,12 @@ const LandingSection = () => {
         </Heading>
         <Box p={6} rounded="md" w="100%">
           {/* Step 4.d Add the onSubmit handler */}
-          {/* handleSubmit from Formik automatically prevent the default HTML submission behavior */}
+          {/* handleSubmit from Formik automatically prevent the default HTML submission behavior 
+          to avoid slowing down the app by reloading the page */}
           <form onSubmit={formik.handleSubmit}> 
             <VStack spacing={4}>
               {/* Step 4.c - Group each field in a FormControl chakra UI component */}
-              <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+              <FormControl isInvalid={touched.firstName && errors.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
@@ -75,7 +79,8 @@ const LandingSection = () => {
                 when the isInvalid prop from the parent FormControl becomes true */}
                 <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+              {/* Step 4.c - Repeat the same for the other fields */}
+              <FormControl isInvalid={touched.email && errors.email}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
@@ -95,7 +100,7 @@ const LandingSection = () => {
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+              <FormControl isInvalid={touched.comment && errors.comment}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
