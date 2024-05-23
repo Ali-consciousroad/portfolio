@@ -1,3 +1,5 @@
+/* Top-level component of the app where the main structure of the app is defined.
+Also a good place to handle routing if we are using a library like react-router */
 import { ChakraProvider } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";

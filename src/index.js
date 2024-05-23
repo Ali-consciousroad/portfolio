@@ -1,3 +1,6 @@
+// Main entry point of the App
+/* Only concerned with rendering the app and setting up any global provider 
+(component that provides data or functionality to all components in our app. e.g. the Provider component from react-redux) */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
