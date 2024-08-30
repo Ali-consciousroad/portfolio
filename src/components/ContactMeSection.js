@@ -14,7 +14,9 @@ import {
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
+// Import the custom hook to use the submit function
 import useSubmit from "../hooks/useSubmit";
+// Import the custom hook to use the context
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
@@ -26,7 +28,15 @@ const LandingSection = () => {
   // be called when the form is submitted
   const formik = useFormik({
     initialValues: {firstName: '', email: '', type: '', comment: ''},
-    onSubmit: (values) => {}, 
+    onSubmit: async (values) => {
+      try {
+        await submit('/api/submit', values); // Use submit from useSubmit
+        // Use the response message as the content of the alert
+        onOpen(response.type === 'success' ? 'All good' : 'Oops', response.message);
+      } catch (error) {
+        onOpen('Oops', 'An error occurred while submitting the form');
+      }
+    }, 
     // Add the validation rules
     validationSchema: Yup.object().shape({
       firstName: Yup.string()
@@ -62,7 +72,7 @@ const LandingSection = () => {
         </Heading>
         <Box p={6} rounded="md" w="100%">
           {/* Step 4.d Add the onSubmit handler */}
-          {/* handleSubmit from Formik automatically prevent the default HTML submission behavior 
+          {/* handleSubmit from Formik automatically prevents the default HTML submission behavior 
           to avoid slowing down the app by reloading the page */}
           <form onSubmit={formik.handleSubmit}> 
             <VStack spacing={4}>

@@ -5,9 +5,9 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Financial Dashboard",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "Financial dashboard using Next.js",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
-    title: "Event planner",
+    title: "Event Planner",
     description:
       "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
     getImageSrc: () => require("../images/photo4.jpg"),
