@@ -47,7 +47,9 @@ const ProjectsSection = () => {
         gridTemplateColumns="repeat(2,minmax(0,1fr))"
         gridGap={8}
       >
-        {/* Map over the projects array and render a Card component for each project */}
+        {/* Map over the projects array and render a Card component for each project.
+        When the .map() JS function is directly embedded within the JSX using curly braces {} 
+        so there is no need to assign the returned array to a new variable. */}
         {projects.map((project) => (
           <Card
             key={project.title}
