@@ -5,27 +5,27 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "Financial Dashboard",
+    title: "Personal blog ",
     description:
-      "Financial dashboard using Next.js",
+      "A personal blog built using Next.js",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
-    title: "React Infinite Scroll",
+    title: "React Portolio",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+      "A React portfolio using React last technology",
     getImageSrc: () => require("../images/photo2.jpg"),
   },
   {
-    title: "Photo Gallery",
+    title: "Next Gen. Freelance Marketplace",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+      "A next geneneration freelance marketplace dao",
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
-    title: "Event Planner",
+    title: "Financial Dashboard",
     description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
+      "A financial dashboard to track your last expenses",
     getImageSrc: () => require("../images/photo4.jpg"),
   },
 ];

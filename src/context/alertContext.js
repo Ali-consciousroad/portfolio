@@ -1,3 +1,4 @@
+/* Defines a React context for managing the state of an alert system globally across the component tree. */
 /* React context is used for sharing state globally across the component tree 
 wihtout prop drilling. */
 import {createContext, useContext, useState} from "react";
