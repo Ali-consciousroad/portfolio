@@ -9,15 +9,17 @@ const projects = [
     description:
       "A personal blog built using Next.js",
     getImageSrc: () => require("../images/photo1.jpg"),
+    projectLink:"https://next-jsblog-five.vercel.app"
   },
   {
     title: "React Portolio",
     description:
       "A React portfolio using React last technology",
     getImageSrc: () => require("../images/photo2.jpg"),
+    projectLink:"https://portfolio-g53twfy3e-aliconsciousroads-projects.vercel.app/"
   },
   {
-    title: "Next Gen. Freelance Marketplace",
+    title: "Consciousroad",
     description:
       "A next geneneration freelance marketplace dao",
     getImageSrc: () => require("../images/photo3.jpg"),
@@ -27,6 +29,7 @@ const projects = [
     description:
       "A financial dashboard to track your last expenses",
     getImageSrc: () => require("../images/photo4.jpg"),
+    projectLink:"https://nextjs-dashboard-sooty-nu-93.vercel.app/"
   },
 ];
 
@@ -38,6 +41,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            projectLink={project.projectLink} // Pass the projectLink prop
           />
         ))
   // Test 

@@ -19,8 +19,8 @@ const LandingSection = () => (
   <VStack>
     <Avatar size="2xl" name="Ali" src={profilePic} />
     <Heading as="h1" size="m" color="white" textAlign="center">Hello World, Ali there!</Heading>
-    <Heading as="h1" size="xl" color="white" textAlign="center">Web3 Full Stack JS Engineer</Heading>
-    <Heading as="h1" size="xl" color="white" textAlign="center">specialised React.js, Next.js, Node.js, SQL and Solidity</Heading>
+    <Heading as="h1" size="xl" color="white" textAlign="center">Full Stack JS Software Engineer</Heading>
+    <Heading as="h1" size="xl" color="white" textAlign="center">specialised in React.js, Next.js, SQL and Node.js</Heading>
   </VStack>
   </FullScreenSection>
 );
