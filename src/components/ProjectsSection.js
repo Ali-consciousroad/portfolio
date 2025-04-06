@@ -16,7 +16,7 @@ const projects = [
     description:
       "A React portfolio using React last technology",
     getImageSrc: () => require("../images/photo2.jpg"),
-    projectLink:"https://portfolio-g53twfy3e-aliconsciousroads-projects.vercel.app/"
+    projectLink:"https://portfolio-five-lime-23.vercel.app/"
   },
   {
     title: "Consciousroad",
