@@ -4,7 +4,7 @@ import FullScreenSection from "./FullScreenSection";
 import profilePic from '../images/profile_pic.jpg';
 
 const greeting = "Hello, I am Ali!";
-const bio1 = "Full Stack JS Software Engineer";
+const bio1 = "Web3.0 Full Stack JS Software Engineer";
 const bio2 = "specialised in React.js, Next.js, Node.js, SQL and Solidity";
 
 // Implement the UI for the LandingSection component according to the instructions.
@@ -19,8 +19,8 @@ const LandingSection = () => (
   <VStack>
     <Avatar size="2xl" name="Ali" src={profilePic} />
     <Heading as="h1" size="m" color="white" textAlign="center">Hello World, Ali there!</Heading>
-    <Heading as="h1" size="xl" color="white" textAlign="center">Full Stack JS Software Engineer</Heading>
-    <Heading as="h1" size="xl" color="white" textAlign="center">specialised in React.js, Next.js, SQL and Node.js</Heading>
+    <Heading as="h1" size="xl" color="white" textAlign="center">Web 3.0 Full Stack JS Software Engineer</Heading>
+    <Heading as="h1" size="xl" color="white" textAlign="center">specialised in React.js, Next.js, SQL and Solidity</Heading>
   </VStack>
   </FullScreenSection>
 );
